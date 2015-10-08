@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tic_tac_toe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="board.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-3b-agF">
+                                <rect key="frame" x="113" y="113" width="375" height="375"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="7Ru-QZ-gM4"/>
+                                    <constraint firstAttribute="height" constant="375" id="dbc-5n-0kx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJX-kc-Dzz">
+                                <rect key="frame" x="124" y="121" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mOp-c9-2VW"/>
+                                    <constraint firstAttribute="width" constant="100" id="zSt-9f-Cop"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="nought.png"/>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tlg-3b-agF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GOc-De-lgy"/>
+                            <constraint firstItem="Tlg-3b-agF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LBy-ed-RYa"/>
+                            <constraint firstItem="Tlg-3b-agF" firstAttribute="top" secondItem="lJX-kc-Dzz" secondAttribute="bottom" constant="-108" id="hzA-MK-deL"/>
+                            <constraint firstItem="Tlg-3b-agF" firstAttribute="leading" secondItem="lJX-kc-Dzz" secondAttribute="trailing" constant="-111" id="v3r-67-riZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="389"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="board.png" width="744" height="783"/>
+        <image name="nought.png" width="214" height="214"/>
+    </resources>
 </document>
