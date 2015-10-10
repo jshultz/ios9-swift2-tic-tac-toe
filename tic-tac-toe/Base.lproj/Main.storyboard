@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -131,14 +132,38 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ion-Sr-S0A">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ion-Sr-S0A">
                                 <rect key="frame" x="240" y="378" width="121" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="1hd-aw-qWc"/>
+                                    <constraint firstAttribute="height" constant="30" id="eTk-Ea-zHh"/>
+                                </constraints>
                                 <state key="normal" title="Play Again?"/>
                                 <connections>
                                     <action selector="playAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNL-M2-5zA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player One:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obk-CT-nMk">
+                                <rect key="frame" x="20" y="559" width="88" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pu9-MZ-q9B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Two:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da6-j0-tCF">
+                                <rect key="frame" x="450" y="558" width="88" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8iD-fn-7rA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -146,6 +171,7 @@
                             <constraint firstItem="Tlg-3b-agF" firstAttribute="leading" secondItem="sUf-01-enp" secondAttribute="trailing" constant="-237" id="4xi-YI-6Nn"/>
                             <constraint firstItem="f6Z-5j-RDs" firstAttribute="top" secondItem="Tlg-3b-agF" secondAttribute="bottom" constant="-110" id="5gm-tk-Knk"/>
                             <constraint firstItem="9K9-Ib-LEs" firstAttribute="leading" secondItem="Tlg-3b-agF" secondAttribute="trailing" constant="-232" id="6Is-mE-n2o"/>
+                            <constraint firstItem="ion-Sr-S0A" firstAttribute="leading" secondItem="Tlg-3b-agF" secondAttribute="trailing" constant="-248" id="8Wr-zp-chr"/>
                             <constraint firstItem="Tlg-3b-agF" firstAttribute="top" secondItem="B3T-hR-24k" secondAttribute="bottom" constant="-108" id="E03-Ne-SEV"/>
                             <constraint firstItem="qcl-F3-C5I" firstAttribute="leading" secondItem="Tlg-3b-agF" secondAttribute="trailing" constant="-232" id="El3-Ju-f4p"/>
                             <constraint firstItem="Tlg-3b-agF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GOc-De-lgy"/>
@@ -154,7 +180,11 @@
                             <constraint firstItem="Tlg-3b-agF" firstAttribute="leading" secondItem="f6Z-5j-RDs" secondAttribute="trailing" constant="-111" id="LRy-lw-DeX"/>
                             <constraint firstItem="42s-3a-Yzz" firstAttribute="top" secondItem="Tlg-3b-agF" secondAttribute="bottom" constant="-237" id="PFV-JD-3Fi"/>
                             <constraint firstItem="Tlg-3b-agF" firstAttribute="top" secondItem="qcl-F3-C5I" secondAttribute="bottom" constant="-108" id="TmR-3v-S9G"/>
+                            <constraint firstItem="Obk-CT-nMk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vy9-r2-Lbz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="da6-j0-tCF" secondAttribute="trailing" constant="42" id="XkB-zg-pXz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Obk-CT-nMk" secondAttribute="bottom" constant="20" id="bVi-Hr-rdQ"/>
                             <constraint firstItem="B3T-hR-24k" firstAttribute="leading" secondItem="Tlg-3b-agF" secondAttribute="trailing" constant="-107" id="cRN-eb-LbV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="da6-j0-tCF" secondAttribute="bottom" constant="21" id="ccb-Bl-76e"/>
                             <constraint firstItem="9lq-pv-rtc" firstAttribute="top" secondItem="Tlg-3b-agF" secondAttribute="bottom" constant="-110" id="f0k-M4-E4e"/>
                             <constraint firstItem="Tlg-3b-agF" firstAttribute="top" secondItem="lJX-kc-Dzz" secondAttribute="bottom" constant="-108" id="hzA-MK-deL"/>
                             <constraint firstItem="7Jc-bD-0pV" firstAttribute="top" secondItem="Tlg-3b-agF" secondAttribute="bottom" constant="-237" id="mHU-QK-fir"/>
@@ -171,6 +201,8 @@
                         <outlet property="button" destination="lJX-kc-Dzz" id="LNk-R8-w6w"/>
                         <outlet property="gameOverLabel" destination="nhD-2h-LuY" id="bfg-QQ-qnB"/>
                         <outlet property="playAgain" destination="ion-Sr-S0A" id="wmt-aP-qoS"/>
+                        <outlet property="playerOneLabel" destination="Obk-CT-nMk" id="l6I-O9-dsO"/>
+                        <outlet property="playerTwoLabel" destination="da6-j0-tCF" id="2kg-yo-UBh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

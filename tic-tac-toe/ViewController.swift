@@ -16,9 +16,16 @@ class ViewController: UIViewController {
     
     var gameActive = true
     
+    var playerOne:Int = 0
+    var playerTwo:Int = 0
+    
     let winningCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
     @IBOutlet weak var gameOverLabel: UILabel!
+    
+    @IBOutlet weak var playerOneLabel: UILabel!
+    
+    @IBOutlet weak var playerTwoLabel: UILabel!
     
     
     @IBOutlet weak var playAgain: UIButton!
@@ -60,10 +67,13 @@ class ViewController: UIViewController {
                 if (gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]]) {
                     
                     if gameState[combination[0]] == 1 {
-                        print("Noughts has won!")
-                        gameOverLabel.text = "Crosses has won!"
+                        gameOverLabel.text = "X's have won!"
+                        playerTwo = playerTwo + 1
+                        playerTwoLabel.text = "Player Two: \(playerTwo)"
                     } else {
-                        gameOverLabel.text = "Noughts has won!"
+                        gameOverLabel.text = "Zeroes have won!"
+                        playerOne = playerOne + 1
+                        playerOneLabel.text = "Player One: \(playerOne)"
                     }
                     
                     endGame()
